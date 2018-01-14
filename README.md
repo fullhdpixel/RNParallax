@@ -1,10 +1,6 @@
+Forked from (https://github.com/kyaroru/RNParallax)
 
-# RNParallax (react-native-parallax-header)
-[![GitHub stars](https://img.shields.io/github/stars/kyaroru/RNParallax.svg)](https://github.com/kyaroru/RNParallax/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/kyaroru/RNParallax.svg)](https://github.com/kyaroru/RNParallax/network)
-[![GitHub issues](https://img.shields.io/github/issues/kyaroru/RNParallax.svg)](https://github.com/kyaroru/RNParallax/issues)
-
-[![NPM](https://nodei.co/npm/react-native-parallax-header.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-parallax-header/)
+# ParallaxHeader (react-native-parallax-header)
 
 - A react native scroll view component with Parallax header :p
 - Inspired by [GitHub - jaysoo/react-native-parallax-scroll-view](https://github.com/jaysoo/react-native-parallax-scroll-view)
@@ -12,16 +8,8 @@
 
 ## Installation
 ```bash
-$ npm i react-native-parallax-header --save
+# $ yarn add react-native-parallax-header --save
 ```
-## Demo
-### iPhone X
-![iPhone X (Image)](http://g.recordit.co/o24X5s9rFv.gif)
-![iPhone X (Color)](http://g.recordit.co/Owbt2X4ZCo.gif)
-
-### iPhone 8
-![iPhone 8 (Image)](http://g.recordit.co/7dbGiEDx7H.gif)
-![iPhone 8 (Color)](http://g.recordit.co/YxXtQjTXMU.gif)
 
 ## Example
 ```jsx
@@ -44,7 +32,7 @@ const styles = StyleSheet.create({
 render() {
   return (
     <View style={styles.container}>
-      <ReactNativeParallaxHeader
+      <ParallaxHeader
         headerMinHeight={120}
         headerMaxHeight={170}
         extraScrollHeight={20}

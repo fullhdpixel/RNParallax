@@ -1,8 +1,8 @@
 {
-  "name": "react-native-parallax-header",
+  "name": "parallax-header",
   "version": "1.0.5",
   "description": "A react native scroll view component with Parallax header :p",
-  "main": "index.js",
+  "main": "ParallaxHeader.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
