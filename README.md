@@ -63,5 +63,5 @@ render() {
 | `navbarColor` | `string` | No | This is the background color of the navbar (after scroll up) | Default color is `#3498db` |
 | `title` | `string` | No | This is the title to be display in the header | Default is empty string `‘’` | 
 | `titleStyle` | `style` | No | This is the title style to override default font size/color | Default to `color: ‘white’ `text and `fontSize: 16` |
-| `scrollEventThrottle` | `number` | No | This is the scroll event throttle | Default is `16` |
+| `scrollEventThrottle` | `number` | No | This controls how often the scroll event will be fired while scrolling (as a time interval in ms).  | Default is `16` |
 

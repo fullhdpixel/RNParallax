@@ -22,10 +22,12 @@ export const DEFAULTS = {
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    flex: 1
+    flex: 1,
+    zIndex:99
   },
   scrollView: {
-    flex: 1
+    flex: 1,
+    zIndex: 99,
   },
   header: {
     position: "absolute",
@@ -59,10 +61,7 @@ export const styles = StyleSheet.create({
     left: 0,
     right: 0,
     paddingTop: STATUS_BAR_HEIGHT,
+    alignItems: "center",
+    justifyContent: "flex-start"
   },
-  headerText: {
-    color: DEFAULTS.TITLE_COLOR,
-    textAlign: "center",
-    fontSize: 16
-  }
 });

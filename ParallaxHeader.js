@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { DEFAULTS, styles } from "./ParallaxHeaderStyles";
-import { Animated, Text, View } from "react-native";
+import { Animated, View } from "react-native";
 
 class ParallaxHeader extends Component {
   constructor() {
@@ -90,27 +90,6 @@ class ParallaxHeader extends Component {
       outputRange: [5, 0, 0],
       extrapolate: "clamp"
     });
-  }
-
-  renderCustomView() {
-    // const { title, titleStyle } = this.props;
-    const { renderCustomView } = this.props;
-    const titleTranslate = this.getTitleTranslate();
-
-    return (
-      <Animated.View
-        style={[
-          styles.headerTitle,
-          {
-            transform: [{ translateY: titleTranslate }],
-            height: this.getHeaderHeight()
-          }
-        ]}
-      >
-        {renderCustomView()}
-         {/* <Text style={[styles.headerText, titleStyle]}>{title}</Text> */}
-      </Animated.View>
-    );
   }
 
   renderHeaderForeground() {
@@ -227,6 +206,24 @@ class ParallaxHeader extends Component {
     );
   }
 
+  renderCustomView() {
+    const { renderCustomView } = this.props;
+    const titleTranslate = this.getTitleTranslate();
+
+    return (
+      <Animated.View
+        style={[
+          styles.headerTitle,
+          {
+            transform: [{ translateY: titleTranslate }],
+          }
+        ]}
+      >
+        {renderCustomView()}
+      </Animated.View>
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -247,8 +244,6 @@ ParallaxHeader.propTypes = {
   backgroundImage: PropTypes.any,
   navbarColor: PropTypes.string,
   renderCustomView: PropTypes.View,
-  // title: PropTypes.string,
-  // titleStyle: PropTypes.number,
   headerMaxHeight: PropTypes.number,
   headerMinHeight: PropTypes.number,
   scrollEventThrottle: PropTypes.number,
@@ -261,9 +256,7 @@ ParallaxHeader.defaultProps = {
   navbarColor: DEFAULTS.NAVBAR_COLOR,
   backgroundColor: DEFAULTS.BACKGROUND_COLOR,
   backgroundImage: null,
-  renderCustomView: () => <View><Text>test</Text></View>,
-  // title: "",
-  // titleStyle: styles.headerText,
+  renderCustomView: () => <View/>,
   headerMaxHeight: DEFAULTS.HEADER_MAX_HEIGHT,
   headerMinHeight: DEFAULTS.HEADER_MIN_HEIGHT,
   scrollEventThrottle: DEFAULTS.SCROLL_EVENT_THROTTLE,
